@@ -1,0 +1,15 @@
+.bluCls{
+    color:blue
+}
+.redCls{
+    color:red
+}
+.greenCls{
+    color:green
+}
+ul:not(.browser-default) li {
+    list-style-type: disc;
+}
+.card{
+    width:50%;
+}
