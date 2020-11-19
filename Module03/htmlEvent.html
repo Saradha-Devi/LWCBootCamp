@@ -1,0 +1,17 @@
+<template>
+    <lightning-button type="text" label={picLabel} onclick={handleEventChange}></lightning-button>
+    <template if:false={showPic}>
+        <br>
+        <p class="slds-m-around--medium card">I am Tom</p>
+        <div class="slds-m-vertical_medium">
+            <img src={Tom}>
+        </div>
+    </template>
+    <template if:true={showPic}>
+        <br>
+        <p class="slds-m-around--medium card">I am Jerry</p>
+        <div class="slds-m-vertical_medium">
+            <img src={Jerry}>
+        </div>
+    </template>
+</template>

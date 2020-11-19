@@ -1,0 +1,15 @@
+<template>
+    <lightning-card title="Iterator Demo" icon-name="custom:custom14" class="slds-size_small">
+            <template iterator:it={data}>
+                <div key={it.value.Id}>
+                    <div if:true={it.first} class="list-first">
+						-----------------------------------------
+					</div>
+                    {it.value.Name} - {it.value.Email}
+                    <div if:true={it.last} class="list-last">
+						-----------------------------------------
+					</div>
+                </div>
+            </template>
+    </lightning-card>
+</template>

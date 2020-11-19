@@ -1,0 +1,42 @@
+<template>
+    <lightning-card title="For:Each Demo" icon-name="custom:custom14" class="slds-size_small">
+   <table class="slds-table slds-table_cell-buffer slds-table_bordered">
+            <thead>
+                <tr class="slds-line-height_reset">
+                   
+                    <th class="" scope="col">
+                        <div class="slds-truncate" title="Index">Index</div>
+                    </th>
+                    <th class="" scope="col">
+                        <div class="slds-truncate" title="Id">Id</div>
+                    </th>
+                    <th class="" scope="col">
+                        <div class="slds-truncate" title="Name">Name</div>
+                    </th>
+                    <th class="" scope="col">
+                        <div class="slds-truncate" title="Email">Email</div>
+                    </th>
+                   
+                </tr>
+            </thead>
+            <tbody>
+                <template for:each={data} for:item="dataObj" for:index="idx">
+                    <tr key={dataObj.Id}>
+                        <td scope="col">
+                                <div>{idx}</div>
+                        </td>
+                        <td scope="col">
+                            <div>{dataObj.id}</div>
+                        </td>
+                        <td scope="col">
+                            <div>{dataObj.Name}</div>
+                        </td>
+                        <td scope="col">
+                            <div>{dataObj.Email}</div>
+                        </td>
+                    </tr>
+                </template>
+            </tbody>
+        </table>
+    </lightning-card>
+</template>
