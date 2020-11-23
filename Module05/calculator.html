@@ -1,0 +1,71 @@
+<template>
+    <p>I am Child</p>
+    <p>{nameVal}</p>
+    <p>My Result</p>
+    <lightning-card title="Full Calcultor" icon-name="custom:custom14">
+        <p>Calc Expression</p>
+        <p>{yourExpression}</p>
+        <p>Result</p>
+        <p>{yourResult}</p>
+        <table class="slds-table slds-table_cell-buffer slds-table_fixed-layout slds-max-medium-table_stacked-horizontal slds-table_bordered">
+            <tbody>
+                <tr>
+                    <td scope="col">
+                        <lightning-button class=" slds-button_neutral" label="1" onclick={doCalc}>1</lightning-button>
+                    </td>
+                    <td scope="col">
+                        <lightning-button class=" slds-button_neutral" label="2" onclick={doCalc}>>2</lightning-button>
+                    </td>
+                    <td scope="col">
+                        <lightning-button class=" slds-button_neutral" label="3" onclick={doCalc}>>3</lightning-button>
+                    </td>
+                    <td scope="col">
+                        <lightning-button class=" slds-button_neutral" label="+" onclick={doCalc}>>+</lightning-button>
+                    </td>
+                </tr>
+                <tr>
+                    <td scope="col">
+                        <lightning-button class=" slds-button_neutral" label="4" onclick={doCalc}>>4</lightning-button>
+                    </td>
+                    <td scope="col">
+                        <lightning-button class=" slds-button_neutral" label="5" onclick={doCalc}>>5</lightning-button>
+                    </td>
+                    <td scope="col">
+                        <lightning-button class=" slds-button_neutral" label="6" onclick={doCalc}>>6</lightning-button>
+                    </td>
+                    <td scope="col">
+                        <lightning-button class=" slds-button_neutral" label="-" onclick={doCalc}>>-</lightning-button>
+                    </td>
+                </tr>
+                <tr>
+                    <td scope="col">
+                        <lightning-button class=" slds-button_neutral" label="7" onclick={doCalc}>>7</lightning-button>
+                    </td>
+                    <td scope="col">
+                        <lightning-button class=" slds-button_neutral" label="8" onclick={doCalc}>>8</lightning-button>
+                    </td>
+                    <td scope="col">
+                        <lightning-button class=" slds-button_neutral" label="9" onclick={doCalc}>>9</lightning-button>
+                    </td>
+                    <td scope="col">
+                        <lightning-button class=" slds-button_neutral" label="*" onclick={doCalc}>>*</lightning-button>
+                    </td>
+                </tr>
+                <tr>
+                    <td scope="col">
+                        <lightning-button class=" slds-button_neutral" label="CLR" onclick={doCalc}>>CLR</lightning-button>
+                    </td>
+                    <td scope="col">
+                        <lightning-button class=" slds-button_neutral" name="34" label="0" onclick={doCalc}>>0</lightning-button>
+                    </td>
+                    <td scope="col">
+                        <lightning-button class=" slds-button_neutral" label="=" onclick={doCalc}>>=</lightning-button>
+                    </td>
+                    <td scope="col">
+                        <lightning-button class=" slds-button_neutral" label="/" onclick={doCalc}>>/</lightning-button>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </lightning-card>
+</template>
