@@ -1,0 +1,69 @@
+<template>
+    <lightning-card title="LDS Demo" icon-name="custom:custom14" class="slds-size_small slds-p-around_xx-large">
+        <div class="slds-p-around_xx-large">
+        <lightning-button type="text" label={picLabel} onclick={handleEventChange}></lightning-button>
+        <br>
+        
+        <template if:false={showPic}>
+            <br>
+            <br>
+            <p style="border-bottom: 2px solid black;align-items: center;justify-content: center;display: flex;">Account Detail</p>
+            <lightning-record-edit-form object-api-name="Account" onsuccess={handleSuccess}>
+                <lightning-messages>
+                </lightning-messages>
+
+                <lightning-input-field field-name={accNameField}>
+                </lightning-input-field>
+                <lightning-input-field field-name={accRevenueField}>
+                </lightning-input-field>
+
+                <lightning-button class="slds-m-top_small" variant="brand" type="submit" name="Create" label="Create">
+                </lightning-button>
+            </lightning-record-edit-form>
+            <br>
+            <p style="border-bottom: 2px solid black;align-items: center;justify-content: center;display: flex;">Contact Detail</p>
+            <lightning-record-edit-form object-api-name="Contact" onsuccess={handleSuccess}>
+                <lightning-messages>
+                </lightning-messages>
+
+                <lightning-input-field field-name={contactFName}>
+                </lightning-input-field>
+                <lightning-input-field field-name={contactLName}>
+                </lightning-input-field>
+                <lightning-input-field field-name={contactSalutation}>
+                </lightning-input-field>
+                <lightning-button class="slds-m-top_small" variant="brand" type="submit" name="Create" label="Create">
+                </lightning-button>
+            </lightning-record-edit-form>
+            <p style="border-bottom: 2px solid black;align-items: center;justify-content: center;display: flex;">Opportunity Detail</p>
+            <lightning-record-edit-form object-api-name="Opportunity" onsuccess={handleSuccess}>
+                <lightning-messages>
+                </lightning-messages>
+
+                <lightning-input-field field-name={oppName}>
+                </lightning-input-field>
+                <lightning-input-field field-name={oppCloseDate}>
+                </lightning-input-field>
+                <lightning-input-field field-name={oppStage}>
+                </lightning-input-field>
+                <lightning-button class="slds-m-top_small" variant="brand" type="submit" name="Create" label="Create">
+                </lightning-button>
+            </lightning-record-edit-form>
+            <!--<lightning-record-form record-id={recordId} object-api-name={Opportunity} fields={myOppFields} columns="2"
+            onsubmit={handleSubmit}></lightning-record-form>-->
+        </template>
+    </div>
+        <template if:true={showPic}>
+            <br>
+            <p style="border-bottom: 2px solid black;align-items: center;justify-content: center;display: flex;">Account</p>
+            <lightning-record-form record-id={recordId} object-api-name={objectApiName} layout-type="Compact"
+                columns="2" onsubmit={handleSubmit}></lightning-record-form>
+            <p style="border-bottom: 2px solid black;align-items: center;justify-content: center;display: flex;">Contact</p>
+            <lightning-record-form record-id={recordId} object-api-name={objectApiContactName} layout-type="Compact"
+                columns="2" onsubmit={handleSubmit}></lightning-record-form>
+            <p style="border-bottom: 2px solid black;align-items: center;justify-content: center;display: flex;">Opportunity</p>
+            <lightning-record-form record-id={recordId} object-api-name={objectApiOppName} layout-type="Compact"
+                columns="2" onsubmit={handleSubmit}></lightning-record-form>
+        </template>
+    </lightning-card>
+</template>
